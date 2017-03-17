@@ -8,7 +8,9 @@
 		"laravel/framework": "5.0.*",
 		"maatwebsite/excel": "~2.1.0",
 		"laravelcollective/html": "~5.0",
-		"sammyk/laravel-facebook-sdk": "2.2.0"
+		"sammyk/laravel-facebook-sdk": "2.2.0",
+		"codingo-me/dropzoner": "^1.0",
+		"edvinaskrucas/notification": "5.0.*"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.0",
@@ -16,7 +18,8 @@
 	},
 	"autoload": {
 		"classmap": [
-			"database"
+			"database",
+			"resources\\myLib"
 		],
 		"psr-4": {
 			"App\\": "app/",

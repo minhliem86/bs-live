@@ -499,8 +499,8 @@ i.ic-scrolldown{
 
 .dotstyle-fillup li a {
 	overflow: hidden;
-	background-color: transparent;
-	box-shadow: inset 0 0 0 2px white;
+	background-color: $xanhduong2;
+	box-shadow: none;
 	-webkit-transition: background 0.3s ease;
 	transition: background 0.3s ease;
 }
@@ -514,13 +514,16 @@ i.ic-scrolldown{
 	width: 100%;
 	// background-color: $xanhduong;
 	// box-shadow: 0 0 1px $xanhduong;
-	background-color: lighten($xanhduong2, 10%);
+	background-color: darken($xanhduong,10%);
 	-webkit-transition: height 0.3s ease;
 	transition: height 0.3s ease;
 }
 
 .dotstyle-fillup li a:hover,
 .dotstyle-fillup li a:focus {
+	box-shadow: inset 0 0 0 2px darken($xanhduong,10%);
+	background-color: darken($xanhduong,10%);
+	border-color:transparent;
 	// background-color: lighten($xanhduong2, 10%);
 }
 

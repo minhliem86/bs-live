@@ -10,7 +10,7 @@
 	$(document).ready(function(){
 
 		var projectSwiper = new Swiper('#swiper-partner',{
-			slidesPerView : 10,
+			slidesPerView : 11,
       slidesPerColumn:3,
 			spaceBetween: 10,
 			autoplay: 1000,
@@ -27,6 +27,12 @@
 			}
 		})
 
+    $('#swiper-partner').hover(function(){
+      projectSwiper.stopAutoplay();
+    },function(){
+      projectSwiper.startAutoplay();
+    });
+
 		// ANIMATION
 		animation('animation','fadeInDown','80%');
 
@@ -38,8 +44,16 @@
 @stop
 
 @section('content')
-<marquee behavior="" direction=""></marquee>
-<div class="section section01">
+	<div class="dotstyle dotstyle-fillup">
+	  <ul>
+	    <li class="current"><a class="tooltipser" title="THE PEOPLE" href="#people">The People </a></li>
+	    <li><a class="tooltipser" title="OUR VISION" href="#vision">Our Vision</a></li>
+	    <li><a class="tooltipser" title="Our Services" href="#service">Our Services</a></li>
+	    <li><a class="tooltipser" title="Our Client" href="#client">Our Client</a></li>
+	  </ul>
+	</div>
+
+<section class="section section01" id="people">
   <div class="title-container">
     <div class="wrap-title">
       <h2 class="title"><i class="ic-text left"></i>The people behind BS Group<i class="ic-text right"></i></h2>
@@ -55,8 +69,8 @@
       </div>
     </div>
   </div>
-</div>	<!-- end section01 -->
-<div class="section section02">
+</section>	<!-- end section01 -->
+<section class="section section02" id="vision">
   <div class="top-section">
     <div class="container">
       <h2 class="title">The ultimately purpose of events<br/>is to build a heritage</h2>
@@ -95,9 +109,9 @@
     </div>
 
   </div>
-</div>	<!-- end section02 -->
+</section>	<!-- end section02 -->
 
-<div class="section section03" id="service">
+<section class="section section03" id="service">
   <div class="title-container">
     <div class="container">
       <div class="wrap-title">
@@ -173,9 +187,9 @@
       </div>
     </div>
   </div>
-</div>	<!-- end section 03 -->
+</section>	<!-- end section 03 -->
 
-<div class="section section04" id="client">
+<section class="section section04" id="client">
   <div class="title-container">
     <div class="wrap-title">
       <h2 class="title"><i class="ic-text left"></i>Our Clients<i class="ic-text right"></i></h2>
@@ -186,34 +200,18 @@
     <div class="container">
       <div class="swiper-container" id="swiper-partner">
         <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="{!!asset('public/assets/frontend')!!}/images/customer-logo/abbott.jpg" class="img-responsive logo-partner" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="{!!asset('public/assets/frontend')!!}/images/customer-logo/nuplex.png" class="img-responsive logo-partner" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="{!!asset('public/assets/frontend')!!}/images/customer-logo/coatphongphu.jpg" class="img-responsive logo-partner" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="{!!asset('public/assets/frontend')!!}/images/customer-logo/sanofi.jpg" class="img-responsive logo-partner" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="{!!asset('public/assets/frontend')!!}/images/customer-logo/Syngenta.jpg" class="img-responsive logo-partner" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="{!!asset('public/assets/frontend')!!}/images/customer-logo/vietsopetro.jpg" class="img-responsive logo-partner" alt="">
-          </div>
-          <div class="swiper-slide">
-            <img src="{!!asset('public/assets/frontend')!!}/images/customer-logo/wanek.jpg" class="img-responsive logo-partner" alt="">
-          </div>
+          @for($i = 1; $i <= 76 ; $i++)
+						<div class="swiper-slide">
+	            <img src="{!!asset('public/assets/frontend')!!}/images/logo-partner/logo-{!!$i!!}.jpg" class="img-responsive logo-partner" alt="">
+	          </div>
+					@endfor
 
         </div>
       </div>
     </div>
 
   </div>
-</div>	<!-- end section 03 -->
+</section>	<!-- end section 03 -->
 
 
 <div class="background-area">

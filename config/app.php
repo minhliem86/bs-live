@@ -147,7 +147,8 @@ return [
 		'Collective\Html\HtmlServiceProvider',
 		'Maatwebsite\Excel\ExcelServiceProvider',
 		'SammyK\LaravelFacebookSdk\LaravelFacebookSdkServiceProvider',
-		'App\Modules\ModuleServiceProvider'
+		'App\Modules\ModuleServiceProvider',
+		'Codingo\Dropzoner\DropzonerServiceProvider'
 
 	],
 
@@ -197,7 +198,7 @@ return [
 		'Validator' => 'Illuminate\Support\Facades\Validator',
 		'View'      => 'Illuminate\Support\Facades\View',
 		'Form' => 'Collective\Html\FormFacade',
-		'Html' => 'Collective\Html\HtmlFacade',	
+		'Html' => 'Collective\Html\HtmlFacade',
 		'Facebook' => 'SammyK\LaravelFacebookSdk\FacebookFacade',
 		'Excel' => 'Maatwebsite\Excel\Facades\Excel'
 

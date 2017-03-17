@@ -72,7 +72,7 @@
 
 		          var docTop = $(document).scrollTop();
 
-		          if(docTop >= thisTop && (docTop < nextTop - 10)){
+		          if(docTop >= thisTop && (docTop < nextTop)){
 		            $('.dotstyle li').eq(i).addClass('current');
 		          }
 		        });

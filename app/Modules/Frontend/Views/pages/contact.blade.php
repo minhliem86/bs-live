@@ -69,6 +69,12 @@
 </script>
 @stop
 @section('content')
+  {{-- <div class="dotstyle dotstyle-fillup">
+	  <ul>
+	    <li><a class="tooltipser" title="Our Services" href="#service">Our Services</a></li>
+	    <li><a class="tooltipser" title="Our Clients" href="#client">Our Clients</a></li>
+	  </ul>
+	</div> --}}
 <div class="section" id="section01">
 
   <div class="above-section01">

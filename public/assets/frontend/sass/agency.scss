@@ -570,11 +570,16 @@ body.page-level-2{
 }
 
 .section04{
+	.content04{
+		#swiper-partner{
+			padding:5px 0;
+		}
+	}
 	img.logo-partner{
-		border:0.01rem solid lighten($text01,50%);
+		// border:0.01rem solid lighten($text01,50%);
 		margin:0 auto;
-		box-shadow:0 0 5px lighten($text01,10%);
-		max-width: 80px;
+		box-shadow:0 0 5px #d6d6d6;
+		max-width: 95px;
 		padding:5px;
 	}
 }
